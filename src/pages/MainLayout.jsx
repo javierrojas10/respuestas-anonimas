@@ -1,19 +1,12 @@
 import { Layout, Tooltip, Typography } from 'antd';
 import { InfoCircleOutlined } from '@ant-design/icons';
 import MainForm from '../components/MainForm';
-const { Header, Footer, Content } = Layout;
-const headerStyle = {
-    textAlign: 'center',
-    color: '#fff',
-    height: 64,
-    paddingInline: 50,
-    lineHeight: '64px',
-    backgroundColor: '#000',
-    with: '100%',
-};
+const { Footer, Content } = Layout;
+
 const contentStyle = {
     textAlign: 'center',
-    minHeight: 80,
+    minHeight: 0,
+    paddingBottom: 50,
 };
 const footerStyle = {
     textAlign: 'center',
@@ -27,17 +20,16 @@ const footerStyle = {
 const layoutStyle = {
 }
 const MainLayout = () => (<Layout style={layoutStyle}>
-    <Header style={headerStyle}>POD de Género Globant Chile</Header>
     <Content >
         <div style={contentStyle}>
-            <Typography.Title level={2}>
-                Formulario de Preguntas Anónimas <Tooltip placement='bottom' title="Este sitio fue diseñado para que pemanezcas en el anonimato. Recuerda ser BeKind."><InfoCircleOutlined /></Tooltip>
+            <Typography.Title level={3}>
+                Formulario de Preguntas Anónimas <Tooltip placement='bottom' title="Este sitio fue diseñado para que pemanezcas en anonimato. BeKind."><InfoCircleOutlined /></Tooltip>
             </Typography.Title>
         </div>
 
         <MainForm />
     </Content>
-    <Footer style={footerStyle}>Desarrollado con amor </Footer>
+    <Footer style={footerStyle}>Desarrollado con 🫰 - POD Género - Globant SCL </Footer>
 </Layout>
 );
 export default MainLayout;

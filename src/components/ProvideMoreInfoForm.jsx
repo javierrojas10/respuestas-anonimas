@@ -1,4 +1,4 @@
-import { Form, Input, InputNumber, Switch } from 'antd';
+import { Form, Input, Select, Switch } from 'antd';
 import { useState } from 'react';
 
 
@@ -26,11 +26,18 @@ const ProvideMoreInfoForm = () => {
                 <Input />
             </Form.Item>
             <Form.Item
-                label="Edad"
+                label="Rango de Edad"
                 name="age"
-                help="Ej: 25"
+                help="Ej: 20 - 30, 30 - 40, etc."
             >
-                <InputNumber />
+                <Select>
+                    <Select.Option value="Menos de 20">Menos de 20</Select.Option>
+                    <Select.Option value="21 - 30">21 - 30</Select.Option>
+                    <Select.Option value="31 - 40">31 - 40</Select.Option>
+                    <Select.Option value="41 - 50">41 - 50</Select.Option>
+                    <Select.Option value="51+">51+</Select.Option>
+
+                </Select>
 
             </Form.Item>
             <Form.Item
